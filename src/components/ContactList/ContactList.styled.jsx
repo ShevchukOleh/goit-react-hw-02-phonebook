@@ -8,6 +8,9 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
     &:not(:last-child) {
         margin-bottom: 10px;
     }
@@ -22,4 +25,9 @@ export const Button = styled.button`
     color: white;
     background-color: #262c4d;
     margin-left: 20px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        background-color:#b30a07; 
+    }
 `;

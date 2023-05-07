@@ -54,15 +54,16 @@ export class App extends Component {
   };
 
   render() {
+    const {onHandleSubmit, onChangeFilter, deleteContact, state: { filter }} = this
     const visible = this.visibleContacts();
     return (
       <div style={{padding: "5px 20px"}}>
         <h1>Phonebook</h1>
-        <ContactForm onSubmit={this.onHandleSubmit}/>
+        <ContactForm onSubmit={onHandleSubmit}/>
 
         <h2>Contacts</h2>
-        <Filter onFilter={this.onChangeFilter} value={this.filter}/>
-        <ContactList deleteContact={this.deleteContact} contacts={visible} />
+        <Filter onFilter={onChangeFilter} value={filter}/>
+        <ContactList deleteContact={deleteContact} contacts={visible} />
       </div>
     );
   };
