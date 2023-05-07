@@ -28,6 +28,7 @@ export class ContactForm  extends Component {
     reset = () => {
         this.setState({ name: '', number: '',})
     }
+    
     render() {
         const {
             handleSubmit,

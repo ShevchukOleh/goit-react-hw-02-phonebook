@@ -1,11 +1,11 @@
+import { Input, Label} from './Filter.styled';
 import PropTypes from 'prop-types';
 
 export const Filter = ({ value, onFilter }) => {
     return (
-        <label>
-            <h3>Find contacts by name</h3>
-            <input onChange={onFilter} value={value} name="filter" />
-        </label>
+        <Label>Find contacts by name
+            <Input onChange={onFilter} value={value} name="filter" />
+        </Label>
   );
 };
 
